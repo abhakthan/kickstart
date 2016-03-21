@@ -1,7 +1,7 @@
 KS        = require './ks'
 Modal     = require './modal'
 Navbar    = require './navbar'
-Debounce  = require '../js/debouncer'
+Debounce  = require '../../core/js-alc/debouncer'
 Icons     = require './icons'
 Status    = require './status'
 Tabs      = require './tabs'
@@ -10,6 +10,7 @@ Buttons   = require './buttons'
 Buffer    = require './buffer'
 Growl     = require './growl'
 Dropdown  = require './dropdown'
+ScopedComponent = require '../../core/js-alc/scoped_component'
 
 k$.ready = ->
   k$.icons()

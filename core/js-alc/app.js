@@ -25,6 +25,8 @@
 
   Dropdown = require('./dropdown');
 
+  ScopedComponent = require('./scoped_component');
+
   k$.ready = function() {
     var $navbar, $tabSet, i, j, len, len1, ref, ref1, results;
     k$.icons();
