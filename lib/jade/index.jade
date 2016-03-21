@@ -1,12 +1,12 @@
 extends layout
 
 block content
-  +b("resources")
+  +block("resources")
     h1 Thanks for using Kickstart 3
     p Let's get to work!
 
-    +c("resource")
+    +component("resource")
       a(href="http://getkickstart.com") Homepage
 
-    +c("resource")
+    +component("resource")
       a(href="https://github.com/ajkochanowicz/kickstart/") GitHub

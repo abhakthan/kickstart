@@ -3,7 +3,7 @@
     :markdown
       # Amadeus shortcuts
 
-      Kickstart natively supports [Amadeus](/amadeus/) selector conventions for keeping 
+      Kickstart natively supports [Amadeus](/amadeus/) selector conventions for keeping
       selectors modular.
 
       Here's an example of how that might look.
@@ -18,31 +18,31 @@
   article.code
     :markdown
       <span>
-         
+
           // Jade (Included with the optional gulp framework)
 
           +page("store", "show")
-            +b("products")
+            +block("products")
               h1 These are our products
 
-              +c("product", "featured") Product 1
-              +c("product") Product 2
-              +c("product") Product 3
-              +c("product") Product 4
+              +component("product", "featured") Product 1
+              +component("product") Product 2
+              +component("product") Product 3
+              +component("product") Product 4
 
           // Sass
 
           +page("store", "show")
             background: #EEEEEE
 
-            +b("products")
+            +block("products")
               padding: $space
 
-            +c("product")
+            +component("product")
               padding: $space/2
               font-size: 2rem
 
-            +c("product", "featured")
+            +component("product", "featured")
               color: map-get($colors, green)
 
 .document
@@ -101,7 +101,7 @@
           +page("products", "show")
           +page("products")
           +page(null, "show")
-          
+
           // Sass
 
           +page("products", "show")
@@ -148,17 +148,17 @@
 
           // Jade
 
-          +b("products")
-            +c("product") Product 1
-            +c("product") Product 2
-            +c("product") Product 3
+          +block("products")
+            +component("product") Product 1
+            +component("product") Product 2
+            +component("product") Product 3
 
           // Sass
 
-          +b("products")
+          +block("products")
             padding: $space
 
-            +c("product")
+            +component("product")
               padding: $space/2
 
 .document
@@ -196,20 +196,20 @@
 
           // Jade
 
-          +b("products")
-            +c("product") Product 1
-            +c("product", "featured") Product 2
-            +c("product") Product 3
+          +block("products")
+            +component("product") Product 1
+            +component("product", "featured") Product 2
+            +component("product") Product 3
 
           // Sass
 
-          +b("products")
+          +block("products")
             padding: $space
 
-            +c("product")
+            +component("product")
               padding: $space/2
 
-            +c("product", "featured")
+            +component("product", "featured")
               color: map-get($colors, green)
 
 .document
@@ -233,4 +233,3 @@
           [data-block="products"] { padding: $space; }
           [data-component="product"] { padding: $space/2; }
           [data-component="product"][data-variant="featured"] { color: map-get($colros, green); }
-
