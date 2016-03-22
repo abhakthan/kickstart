@@ -8,6 +8,6 @@ gulp.task('coffee', function() {
   // Regular JS copying
   gulp.src(['./lib/js/**/*.js'])
     .pipe(babel())
-    .pipe(gulp.dest('./public/js'))
+    .pipe(gulp.dest('./lib/js-temp'))
   // Use this space to compile one-off coffeescript files instead of using require.
 });

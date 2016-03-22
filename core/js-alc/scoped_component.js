@@ -1,11 +1,14 @@
 (function() {
   component = function(selector, fn) {
-    var $selector = k$.$("[data-component~='" + selector + "']"),
-        getInScope = function(scoped_selector) {
-          return $selector.querySelectorAll(scoped_selector);
-        }
+    var $selector = k$.$("[data-component~='" + selector + "']");
+    var elementsInScope = function(scoped_selector) {
+      return $selector.querySelectorAll(scoped_selector);
+    };
+    var singleElementInScope = function(scoped_selector) {
+      return $selector.querySelector(scoped_selector);
+    };
 
-    return fn.call(this, getInScope);
+    fn(singleElementInScope, elementsInScope);
   }
 
   k$.component = component;

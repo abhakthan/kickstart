@@ -11,11 +11,7 @@ gulp.task('browserify', function() {
     // Required watchify args
     cache: {}, packageCache: {}, fullPaths: true,
     // Specify the entry point of your app
-    entries: ['./lib/coffee/app.coffee'],
-    // Add file extentions to make optional in your requires
-    extensions: ['.coffee'],
-    // Enable source maps!
-    debug: true
+    entries: ['./lib/js-temp/app.js'],
   });
 
   var bundle = function() {
