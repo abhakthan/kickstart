@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="kickstart.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="contacts">
+        <aside data-component="groups">
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+              </tr>
+            </thead>
+            <tbody data-render>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+        </aside>
+        <main data-component="people">
+          <h1>A small demonstration of the scoped component pattern</h1>
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Email</td>
+              </tr>
+            </thead>
+            <tbody data-render>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </div>
+    </div>
+
+    <script src="kickstart.js"></script>
+    <script id="contacts">
+      var groups = [
+        {
+          name: "ABC Company",
+          contacts: [
+            {
+              name: "John Smith",
+              email: "jsmith@example.com"
+            },
+            {
+              name: "Jane Doe",
+              email: "jdoe@example.com"
+            },
+            {
+              name: "Delphi Grant",
+              email: "dgrant@example.com"
+            },
+            {
+              name: "Adam Grant",
+              email: "agrant@example.com"
+            },
+            {
+              name: "Sally Kochanowicz",
+              email: "skochanowicz@example.com"
+            },
+            {
+              name: "Dusty Thompson",
+              email: "dthompson@example.com"
+            }
+          ]
+        },
+        {
+          name: "Family",
+          contacts: [
+            {
+              name: "Bob Hart",
+              email: "jsmith@example.com"
+            },
+            {
+              name: "Sylviane Joseph",
+              email: "sjoseph@example.com"
+            },
+            {
+              name: "Yonel Clark",
+              email: "yclark@example.com"
+            },
+            {
+              name: "Lydia Fleck",
+              email: "lfleck@example.com"
+            },
+            {
+              name: "Luke Menton",
+              email: "lmenton@example.com"
+            },
+            {
+              name: "Priscilla Benson",
+              email: "pbenson@example.com"
+            }
+          ]
+        },
+        {
+          name: "Golf Buddies",
+          contacts: [
+            {
+              name: "Rachel Schuemacher",
+              email: "rschuemacher@example.com"
+            },
+            {
+              name: "David Portille",
+              email: "dportille@example.com"
+            },
+            {
+              name: "Clarissa Esplandall",
+              email: "cesplandall@example.com"
+            },
+            {
+              name: "Frank Munster",
+              email: "fmunster@example.com"
+            },
+            {
+              name: "Sally Chen",
+              email: "schen@example.com"
+            },
+            {
+              name: "Meghan Pratten",
+              email: "mpratten@example.com"
+            }
+          ]
+        },
+        {
+          name: "High School Friends",
+          contacts: [
+            {
+              name: "Finn Broen",
+              email: "fbroen@example.com"
+            },
+            {
+              name: "Chelsea Atherton",
+              email: "catherton@example.com"
+            },
+            {
+              name: "Dina Merril",
+              email: "dmerril@example.com"
+            },
+            {
+              name: "Edgar Fiest",
+              email: "efiest@example.com"
+            },
+          ]
+        }
+      ]
+    </script>
+    <script>
+      // No libraries here. Just Pure JS.
+      var groupsMarkup = [""].concat(groups).reduce((markup, group, index) => {
+        return `
+          ${markup}
+          <tr class="row" data-group="${index - 1}">
+            <td>${group.name}</td>
+          </tr>
+        `;
+      });
+
+      var mapPeople = (contacts) => {
+        k$.component("people", function(_$) {
+          peopleMarkup = [""].concat(contacts).reduce((markup, contact, index) => {
+            return `
+              ${markup}
+              <tr class="row" data-person="${index - 1}">
+                <td>${contact.name}</td>
+                <td>${contact.email}</td>
+              </tr>
+            `;
+          });
+
+          _$("tbody").innerHTML = peopleMarkup;
+        });
+      };
+
+      k$.component("groups", (_$) => {
+        _$("tbody").innerHTML = groupsMarkup;
+        _$("tbody").addEventListener("click", (e) => {
+          e.stopPropagation();
+          mapPeople(groups[e.target.parentNode.dataset.group].contacts)
+        })
+      });
+    </script>
+  </body>
+</html>
