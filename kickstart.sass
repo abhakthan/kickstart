@@ -432,3 +432,13 @@ $showFullColumns:    $desktop          // Actual user-defined column measurement
     // No keywords found, pass in values.
     @media screen and (min-width: $showColumns)
       +set-column($columns, $left, $right)
+
+// 2.0 DIRECT APPLICATIONS
+// Diret applications of the above mixins...just in case your theme file didn't
+// specify them already.
+
+=table($args...)
+  +table-default($args...)
+
+=wrapper($fluid)
+  +wrapper-default($args...)
