@@ -1,0 +1,22 @@
+@import "theme"
+
+table
+  +table
+
+.wrapper
+  +wrapper
+
+.contacts
+  +row
+
++component("groups")
+  +column('third')
+
+  tbody tr
+    cursor: pointer
+
+    &:hover
+      background: aliceblue
+
++component("people")
+  +column('twothirds')

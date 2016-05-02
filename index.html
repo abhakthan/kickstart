@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <link rel="stylesheet" href="kickstart.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="contacts">
         <aside data-component="groups">
+          <h1>Groups</h1>
           <table>
             <thead>
               <tr>
@@ -14,13 +15,12 @@
               </tr>
             </thead>
             <tbody data-render>
-              <tr>
-              </tr>
+              <tr> </tr>
             </tbody>
           </table>
         </aside>
         <main data-component="people">
-          <h1>A small demonstration of the scoped component pattern</h1>
+          <h1 class="title">A small demonstration of the scoped component pattern</h1>
           <table>
             <thead>
               <tr>
@@ -30,6 +30,7 @@
             </thead>
             <tbody data-render>
               <tr>
+                <td colspan="2">Please select a group from the left</td>
               </tr>
             </tbody>
           </table>
@@ -151,17 +152,8 @@
       ]
     </script>
     <script>
-      // No libraries here. Just Pure JS.
-      var groupsMarkup = [""].concat(groups).reduce((markup, group, index) => {
-        return `
-          ${markup}
-          <tr class="row" data-group="${index - 1}">
-            <td>${group.name}</td>
-          </tr>
-        `;
-      });
-
-      var mapPeople = (contacts) => {
+      // Pass in a group of contacts to populate table
+      var mapPeople = (contacts, groupName) => {
         k$.component("people", function(_$) {
           peopleMarkup = [""].concat(contacts).reduce((markup, contact, index) => {
             return `
@@ -174,14 +166,27 @@
           });
 
           _$("tbody").innerHTML = peopleMarkup;
+          _$(".title").innerHTML = groupName;
         });
       };
 
       k$.component("groups", (_$) => {
+        // Convert JSON to <table>
+        var groupsMarkup = [""].concat(groups).reduce((markup, group, index) => {
+          return `
+            ${markup}
+            <tr class="row" data-group="${index - 1}">
+              <td>${group.name}</td>
+            </tr>
+          `;
+        });
+
+        // Component-scoped events
         _$("tbody").innerHTML = groupsMarkup;
         _$("tbody").addEventListener("click", (e) => {
           e.stopPropagation();
-          mapPeople(groups[e.target.parentNode.dataset.group].contacts)
+          var group = groups[e.target.parentNode.dataset.group];
+          mapPeople(group.contacts, group.name)
         })
       });
     </script>

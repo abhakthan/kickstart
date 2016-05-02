@@ -1,0 +1,22 @@
+{
+  "name": "kickstart-examples",
+  "version": "1.0.0",
+  "description": "## A Component-driven css framework that loves to be extended.",
+  "main": "kickstart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajkochanowicz/kickstart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajkochanowicz/kickstart/issues"
+  },
+  "homepage": "https://github.com/ajkochanowicz/kickstart#readme",
+  "devDependencies": {
+    "node-sass": "^3.6.0"
+  }
+}
