@@ -133,6 +133,29 @@ iframe {
     opacity: 1;
     transform: translateY(0); } }
 
+html {
+  color: #222; }
+
+ul, ol {
+  margin: 0;
+    margin-bottom: 25px;
+  line-height: 1.45rem; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  line-height: normal; }
+
+p {
+  margin: 0;
+    margin-bottom: 25px;
+  line-height: 1.45rem; }
+
+a {
+  text-decoration: none;
+  color: #47A5DF; }
+  a:hover {
+    text-decoration: underline; }
+
 * {
   font-family: 'museo-sans', 'Lato', 'helvetica neue', sans-serif;
   color: #333; }

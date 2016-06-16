@@ -1,3 +1,47 @@
+// 1.0 VARIABLES
+// =============
+
+// 1.1 Grayscale
+// -------------
+
+$black: #222
+$black_lighter: #333
+$black_lightest: #444
+$gray_darkest: #555
+$gray_darker: #666
+$gray_dark: #777
+$gray: #888
+$gray_light: #999
+$gray_lighter: #AAA
+$gray_lightest: #BBB
+$white_darkest: #CCC
+$white_darker: #EDEDED
+$white: #F7F7F7
+
+// 1.2 Colors
+// ----------
+
+$red: #CA3518
+$orange: darkorange
+$yellow: #ffe312
+$green: #58AA00
+$blue: #47A5DF
+$violet: darkmagenta
+
+// 1.3 Crucial design variables
+// ----------------------------
+
+$primary-color:       $blue
+$secondary-color:     $white
+$space:               25px
+$heading-font-family: 'museo-sans', 'Lato', helvetica neue, sans-serif
+$default-font-family: 'museo-sans', 'Lato', helvetica neue, sans-serif
+$mono-font-family:    'ubuntu-mono', monospace
+$default-font-size:   16px
+$default-font-color:  $gray
+$default-line-height: 1.45rem
+$scalingFactor:       0.2vw
+
 // 1.0 NORMALIZATION
 // =================
 
@@ -209,7 +253,7 @@ iframe
   color: $default-font-color
 
 html
-  color: map-get($black, lightest)
+  color: $black
 
 ul, ol
   margin: 0
@@ -227,13 +271,13 @@ p
 
 a
   text-decoration: none
-  color: map-get($colors, blue)
+  color: $blue
 
   &:hover
     text-decoration: underline
 
 =pre-default
-  color: darken(map-get($colors, blue), 25%)
+  color: darken(blue, 25%)
   border-radius: $space/5
   padding: ($space/5)
   font-family: $mono-font-family
@@ -712,7 +756,7 @@ $showFullColumns:    $desktop          // Actual user-defined column measurement
   @else
     color: white
 
-  @if $background-color == map-get($colors, yellow)
+  @if $background-color == $yellow
     color: map-get($black, lighter)
 
   @if $background-color == transparent
