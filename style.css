@@ -297,7 +297,7 @@ select {
   select.menu-item ul {
     margin-top: 5px;
     right: -25px;
-    border: 1px solid #F7F7F7;
+    border: 1px solid #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
     select.menu-item ul li {
       padding-left: 0;
@@ -306,7 +306,7 @@ select {
   select + .button-dropdown + ul {
     margin-top: 5px;
     right: -25px;
-    border: 1px solid #F7F7F7;
+    border: 1px solid #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
   select.button-dropdown {
     padding-left: 4px;
@@ -442,7 +442,7 @@ select {
   select.menu-item ul {
     margin-top: 5px;
     right: -25px;
-    border: 1px solid #F7F7F7;
+    border: 1px solid #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
     select.menu-item ul li {
       padding-left: 0;
@@ -451,13 +451,24 @@ select {
   select + .button-dropdown + ul {
     margin-top: 5px;
     right: -25px;
-    border: 1px solid #F7F7F7;
+    border: 1px solid #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
   select.button-dropdown {
     padding-left: 4px;
     padding-right: 4px; }
   select.open {
     background-color: #c6c6c6; }
+
+progress {
+  width: 100%; }
+  progress::-webkit-progress-bar {
+    border-radius: 5px;
+    min-height: 25px;
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none; }
+  progress::-webkit-progress-value {
+    border-radius: 5px 0 0 5px; }
 
 * {
   font-family: 'museo-sans', 'Lato', 'helvetica neue', sans-serif;
@@ -468,13 +479,13 @@ table {
   background: white;
   border-spacing: 0;
   empty-cells: show;
-  border: 1px solid lightgray;
+  border: 1px solid #AAA;
   width: 100%;
   margin-bottom: 25px; }
   table pre {
     margin: 0; }
   table thead {
-    background: lightgray;
+    background: #F7F7F7;
     color: black;
     text-align: left;
     vertical-align: bottom;
@@ -482,7 +493,7 @@ table {
     table thead th {
       font-weight: bold;
       text-align: left;
-      border-color: lightgray;
+      border-color: #AAA;
       border-bottom-width: 0px; }
   table th, table td {
     background-color: transparent;
@@ -492,7 +503,7 @@ table {
     overflow: visible;
     padding: 4.16667px 6.25px;
     line-height: normal;
-    border-left: 1px solid lightgray; }
+    border-left: 1px solid #AAA; }
     table th:first-child, table td:first-child {
       border-left-width: 0; }
 
