@@ -4,7 +4,7 @@ k$ = {
     return this.$$(el)[0];
   },
   $$: function(el) {
-    return document.querySelectorAll(el);
+    return Array.prototype.slice.call(document.querySelectorAll(el));
   },
   component: function(selectors, fn) {
     var selector = [""].concat((selectors).split(" ")).reduce(function(a, b) {
