@@ -164,6 +164,301 @@ figure {
   margin: 0;
   padding: 0; }
 
+label, legend {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 6.25px; }
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  padding: 4px 4px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  outline: none;
+  margin-bottom: 25px;
+  line-height: 1.45rem;
+  font-family: "museo-sans", "Lato", helvetica neue, sans-serif;
+  margin: 0;
+    margin-bottom: 0;
+  border: 1px solid #CCC;
+  display: block;
+  border-radius: 3px;
+  max-width: 100%; }
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="email"]:focus,
+  input[type="month"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="tel"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  input[type="week"]:focus {
+    outline: 0px;
+    box-shadow: inset 0px 0px 0px 2px #47A5DF; }
+
+input[disabled] {
+  pointer-events: all;
+  cursor: not-allowed;
+  color: #999; }
+
+textarea {
+  padding: 4px 4px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  outline: none;
+  margin-bottom: 25px;
+  line-height: 1.45rem;
+  font-family: "museo-sans", "Lato", helvetica neue, sans-serif;
+  margin: 0;
+    margin-bottom: 0;
+  border: 1px solid #CCC;
+  display: block;
+  border-radius: 3px;
+  max-width: 100%;
+  width: 300px; }
+  textarea:focus {
+    outline: 0px;
+    box-shadow: inset 0px 0px 0px 2px #47A5DF; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  width: 14px;
+  margin-left: 1px;
+  margin-right: 5px; }
+
+select {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: darkgray;
+  text-align: left;
+  transition: box-shadow 0.15s;
+  vertical-align: middle;
+  user-select: none;
+  padding: 4px 4px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  outline: none;
+  margin-bottom: 25px;
+  line-height: 1.45rem;
+  font-family: "museo-sans", "Lato", helvetica neue, sans-serif;
+  padding: 4px 6px;
+  line-height: 1.45rem;
+  margin-bottom: 0;
+  font-size: 16px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: lightgray;
+  border-color: lightgray;
+  color: #333;
+  height: calc(1.45rem + 8px);
+  background-image: none; }
+  select[disabled], select:disabled {
+    color: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    cursor: not-allowed; }
+  select.menu-item {
+    position: relative; }
+    select.menu-item ul {
+      display: none; }
+    select.menu-item:after {
+      content: '+';
+      font-family: 'Kickstart', Kickstart;
+      font-size: 0.65rem;
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.3); }
+  select:hover {
+    box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 0px 0px rgba(255, 255, 255, 0.1) inset;
+    text-decoration: none; }
+  select:active {
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px -2px 0px 0px rgba(255, 255, 255, 0.1) inset;
+    text-decoration: none; }
+  select.menu-item:after {
+    font-size: 0.85rem;
+    margin-left: 6.25px; }
+  select.menu-item.open ul {
+    display: block; }
+  select.menu-item ul {
+    margin-top: 5px;
+    right: -25px;
+    border: 1px solid #F7F7F7;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+    select.menu-item ul li {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0; }
+  select + .button-dropdown + ul {
+    margin-top: 5px;
+    right: -25px;
+    border: 1px solid #F7F7F7;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+  select.button-dropdown {
+    padding-left: 4px;
+    padding-right: 4px; }
+  select.open {
+    background-color: #c6c6c6; }
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  padding: 4px 4px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  outline: none;
+  margin-bottom: 25px;
+  line-height: 1.45rem;
+  font-family: "museo-sans", "Lato", helvetica neue, sans-serif;
+  margin: 0;
+    margin-bottom: 0;
+  border: 1px solid #CCC;
+  display: block;
+  border-radius: 3px;
+  max-width: 100%; }
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="email"]:focus,
+  input[type="month"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="tel"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  input[type="week"]:focus {
+    outline: 0px;
+    box-shadow: inset 0px 0px 0px 2px #47A5DF; }
+
+input[disabled] {
+  pointer-events: all;
+  cursor: not-allowed;
+  color: #999; }
+
+textarea {
+  padding: 4px 4px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  outline: none;
+  margin-bottom: 25px;
+  line-height: 1.45rem;
+  font-family: "museo-sans", "Lato", helvetica neue, sans-serif;
+  margin: 0;
+    margin-bottom: 0;
+  border: 1px solid #CCC;
+  display: block;
+  border-radius: 3px;
+  max-width: 100%;
+  width: 300px; }
+  textarea:focus {
+    outline: 0px;
+    box-shadow: inset 0px 0px 0px 2px #47A5DF; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  width: 14px;
+  margin-left: 1px;
+  margin-right: 5px; }
+
+select {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: darkgray;
+  text-align: left;
+  transition: box-shadow 0.15s;
+  vertical-align: middle;
+  user-select: none;
+  padding: 4px 4px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  outline: none;
+  margin-bottom: 25px;
+  line-height: 1.45rem;
+  font-family: "museo-sans", "Lato", helvetica neue, sans-serif;
+  padding: 4px 6px;
+  line-height: 1.45rem;
+  margin-bottom: 0;
+  font-size: 16px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: lightgray;
+  border-color: lightgray;
+  color: #333;
+  height: calc(1.45rem + 8px);
+  background-image: none; }
+  select[disabled], select:disabled {
+    color: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    cursor: not-allowed; }
+  select.menu-item {
+    position: relative; }
+    select.menu-item ul {
+      display: none; }
+    select.menu-item:after {
+      content: '+';
+      font-family: 'Kickstart', Kickstart;
+      font-size: 0.65rem;
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.3); }
+  select:hover {
+    box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 0px 0px rgba(255, 255, 255, 0.1) inset;
+    text-decoration: none; }
+  select:active {
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px -2px 0px 0px rgba(255, 255, 255, 0.1) inset;
+    text-decoration: none; }
+  select.menu-item:after {
+    font-size: 0.85rem;
+    margin-left: 6.25px; }
+  select.menu-item.open ul {
+    display: block; }
+  select.menu-item ul {
+    margin-top: 5px;
+    right: -25px;
+    border: 1px solid #F7F7F7;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+    select.menu-item ul li {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0; }
+  select + .button-dropdown + ul {
+    margin-top: 5px;
+    right: -25px;
+    border: 1px solid #F7F7F7;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+  select.button-dropdown {
+    padding-left: 4px;
+    padding-right: 4px; }
+  select.open {
+    background-color: #c6c6c6; }
+
 * {
   font-family: 'museo-sans', 'Lato', 'helvetica neue', sans-serif;
   color: #333; }
