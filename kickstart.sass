@@ -204,7 +204,7 @@ iframe
   animation-name: fadeInDown
 
 =root-element($size: 1)
-  padding: ($size * $size * map-get($rootElement, paddingV)) ($size * $size * map-get($rootElement, paddingV))
+  padding: ($size * $size * 4px) ($size * $size * 4px)
   border-radius: map-get($rootElement, border-radius)
   border: 1px solid transparent
   outline: none
@@ -352,7 +352,7 @@ a
 
 =page-heading-default
   h1, h2, h3, h4, h5, h6
-    border-bottom: 1px solid map-get($white, darker)
+    border-bottom: 1px solid $white
     padding-bottom: $space/2
 
 =heading-xxl-default
@@ -697,6 +697,50 @@ $showFullColumns:    $desktop          // Actual user-defined column measurement
 
   @content
 
+// X.X.X Icons
+// -----------
+
+@font-face
+  font-family: 'Kickstart'
+  src: url(data:application/x-font-woff;charset=utf-8;base64,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) format('opentype')
+
+=icon-default($rg-size: $phablet, $lg-size: $desktop)
+  width: 14px
+  height: 14px
+  display: inline-block
+  vertical-align: middle
+  margin: 2px
+
+  @media screen and (min-width: $rg-size)
+    width: 28px
+    height: 28px
+    margin: 5px
+
+  @media screen and (min-width: $lg-size)
+    width: 56px
+    height: 56px
+    margin: 7px
+
+  .rg
+    display: none
+
+  .lg
+    display: none
+
+  @media screen and (min-width: $rg-size)
+    .sm
+      display: none
+
+    .rg
+      display: block
+
+  @media screen and (min-width: $lg-size)
+    .rg
+      display: none
+
+    .lg
+      display: block
+
 // 3.4.0 Buttons
 // -------------
 
@@ -752,18 +796,18 @@ $showFullColumns:    $desktop          // Actual user-defined column measurement
     background-color: darken($background-color, 5%)
 
   @if lightness($background-color) > 75%
-    color: map-get($black, lighter)
+    color: $black_lighter
   @else
     color: white
 
   @if $background-color == $yellow
-    color: map-get($black, lighter)
+    color: $black_lighter
 
   @if $background-color == transparent
-    color: map-get($black, lighter)
+    color: $black_lighter
 
 =button-size-default($size)
-  padding: ($size * $size * map-get($rootElement, paddingV)) ($size * $size * map-get($rootElement, paddingH))
+  padding: ($size * $size * 4px) ($size * $size * map-get($rootElement, paddingH))
   line-height: $size * $default-line-height
   margin-bottom: 0
   font-size: ($default-font-size) * $size
@@ -796,8 +840,8 @@ $showFullColumns:    $desktop          // Actual user-defined column measurement
 
   &.button-dropdown
     padding:
-      left: map-get($rootElement, paddingV) * $size * $size
-      right: map-get($rootElement, paddingV) * $size * $size
+      left: 4px * $size * $size
+      right: 4px * $size * $size
 
 =button-dropdown-menu
   // Most of the styling actually comes from the global dropdown_menu
@@ -805,10 +849,10 @@ $showFullColumns:    $desktop          // Actual user-defined column measurement
   // with buttons.
   margin-top: 5px
   right: -$space
-  border: 1px solid map-get($white, darker)
+  border: 1px solid $white
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
 
-=button-group-default($background-color: map-get($white, darker), $size: 1)
+=button-group-default($background-color: $white, $size: 1)
   list-style: none
   padding: 0
   margin:
@@ -866,6 +910,128 @@ $showFullColumns:    $desktop          // Actual user-defined column measurement
     right: auto
 
   @content
+
+// X.X.X Containers
+// ----------------
+
+=container-color-default($color: $white)
+  border-color: $color
+
+  header, footer, aside
+    background: $color
+
+    @if lightness($color) > 75%
+      color: $black_lighter
+    @else
+      color: white
+
+=container-default($color: $white)
+  +root-element
+  background: white
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+
+  header, main, footer
+    +root-element
+    margin: (-1 * 4px) - 1
+
+  header, footer
+    h1
+      +heading-xs
+
+    h2, h3, h4, h5, h6
+      +heading-xxs
+
+    h1, h2, h3, h4, h5, h6
+      margin-top: 0
+
+  header, footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    padding:
+      left: $space/2
+      right: $space/2
+
+  header
+    margin-bottom: 4px
+    border-bottom-left-radius: 0px
+    border-bottom-right-radius: 0px
+
+    h1, h2, h3, h4, h5, h6
+      margin-bottom: 0
+
+      &:first-child
+        margin-top: 0
+
+  main
+    padding: $space/2
+
+  main
+    border-radius: 0px
+
+    + main
+      border-top-color: inherit
+      margin-top: 0
+
+  footer
+    margin-top: 4px
+    border-top-left-radius: 0px
+    border-top-right-radius: 0px
+
+  +container-color-default($color)
+
+=thumbnail-content-default($breakpoint: $tablet)
+  display: block
+  overflow: hidden
+  margin-bottom: $space
+  align-items: flex-start
+
+  img, figure
+    margin-bottom: $space
+
+  h1
+    +heading-xs
+
+  @media screen and (min-width: $breakpoint)
+    display: flex
+
+    img, figure
+      flex-grow: 0
+      flex-shrink: 0
+
+    > :not(img):not(figure)
+      width: 100%
+
+      + img, + figure
+        margin-left: $space/2
+
+    > img, > figure
+      + :not(img):not(figure)
+        margin-left: $space/2
+        width: 100%
+
+  @content
+
+=thumbnail-default
+  +root-element
+  border: 1px solid $white
+  display: inline-block
+  max-width: 100%
+
+  img
+    max-width: 100%
+
+  figcaption
+    font-size: 0.85rem
+
+  @content
+
+figure
+  margin: 0
+  padding: 0
 
 // 4.0.0 DIRECT APPLICATIONS
 // =========================
